@@ -24,10 +24,10 @@ Run the script `pipette_error.py` (runtime: ~ 1 sec)
 
 Scripts were run using the following libraries and versions:
 
-Python version 3.10.9
-NumPy version 1.23.5
-SciPy version 1.10.0
-Pandas version 1.5.3
-Matplotlib version 3.7.0
+ * Python version 3.10.9
+ * NumPy version 1.23.5
+ * SciPy version 1.10.0
+ * Pandas version 1.5.3
+ * Matplotlib version 3.7.0
 
 Runtimes were determined on a 2023 MacBook Pro.
