@@ -146,7 +146,6 @@ plt.ylim([0, 9])
 plt.ylabel('affinity (µM)')
 plt.title('RMSLE', **font)
 plt.plot(best_r, best_aff, 'xr')
-plt.savefig('figures/contour_plot_zoomed_in.png', bbox_inches='tight')
 plt.savefig('figures/contour_plot_zoomed_in.pdf', bbox_inches='tight')
 plt.close()
 
@@ -163,7 +162,6 @@ plt.ylim([0, 50])
 plt.ylabel('affinity (µM)')
 plt.title('RMSLE', **font)
 plt.plot(best_r, best_aff, 'xr')
-plt.savefig('figures/contour_plot_zoomed_out.png', bbox_inches='tight')
 plt.savefig('figures/contour_plot_zoomed_out.pdf', bbox_inches='tight')
 plt.close()
 
@@ -190,7 +188,6 @@ for i in range(n_trials):
     plt.title(f"{df['NaHS concentration'].values[i]} µM, # {int(df.replicate.values[i])}")
     plt.xlabel('hour')
     plt.ylabel('cells / ml')
-    plt.savefig(f'figures/check_fit/{i+1}.png', bbox_inches='tight', dpi=300)
     plt.savefig(f'figures/check_fit/{i+1}.pdf', bbox_inches='tight', dpi=300)
     plt.close()
 

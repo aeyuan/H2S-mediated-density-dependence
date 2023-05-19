@@ -63,7 +63,6 @@ for k in aff_grid:
     plt.xlim([0, 300])
     plt.legend(['0/hr', '0.02/hr', '0.04/hr', '0.06/hr'])
     plt.title(f"gmax: {params['gmax'] * u.hour}/h, k: {params['affinity'] / (pfx.micro * u.mole / u.liter )} µM", **font)
-    plt.savefig(f'figures/leakage_vs_lag/{counter}.png', bbox_inches='tight')
     plt.savefig(f'figures/leakage_vs_lag/{counter}.pdf', bbox_inches='tight')
     plt.close()
     counter += 1
