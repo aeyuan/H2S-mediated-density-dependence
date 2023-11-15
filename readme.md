@@ -1,6 +1,6 @@
 This repository contains the ODE model for the paper:
 
-## When is an auxotroph not an auxotroph: budding yeast lacking MET17 can collectively overcome their metabolic defect
+## Sonal et al., PLOS Biology, 2023
 
 Below we provide instructions for reproducing each figure in the file "Supplementary_Text_1". Scripts are intended to be run on the command line. For example, to run the file `fit_affinity_param.py`, enter `python fit_affinity_param.py` at the command line.
 
