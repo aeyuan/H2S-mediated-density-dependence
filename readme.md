@@ -2,7 +2,12 @@ This repository contains the ODE model for the paper:
 
 ## Sonal et al., PLOS Biology, 2023
 
-Below we provide instructions for reproducing each figure in the file "Supplementary_Text_1". Scripts are intended to be run on the command line. For example, to run the file `fit_affinity_param.py`, enter `python fit_affinity_param.py` at the command line.
+Below we provide instructions for reproducing Fig 5E-F in the main text, as well as each figure in the file "Supplementary_Text_1". Scripts are intended to be run on the command line. For example, to run the file `fit_affinity_param.py`, enter `python fit_affinity_param.py` at the command line.
+
+### Fig 5E and 5F:
+
+Run the script `make_fig_5EF` (runtime: ~ 1 sec)
+ * Files will appear in the folder `figures/`
 
 ### Fig ST-1 and ST-2:
 

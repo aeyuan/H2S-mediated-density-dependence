@@ -130,7 +130,7 @@ def run_model(duration=300 * u.hour,
       * initial_cell_density (numeric): The initial cell density.
       * initial_aq_chem_conc (numeric): The initial concentration of an aqueous chemical species.
       * initial_gas_chem_conc (numeric): The initial concentration of a gaseous chemical species.
-      * params (dictionary): Dictionary containing model parameters. Default is default_params_with_gas.
+      * params (dictionary): Dictionary containing model parameters. Default is default_params_without_gas.
       * solver (str): The solver method to use for solving the ordinary differential equation. Default is 'LSODA'.
 
     Returns: A dictionary containing the following:
