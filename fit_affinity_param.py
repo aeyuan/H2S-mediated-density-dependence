@@ -79,17 +79,17 @@ u = unit()
 pfx = prefix()
 
 # read in excel sheet
-df = pd.read_excel('20201019_NaHS_rm11.xlsx', sheet_name='setup', header=49, usecols="A:P").iloc[2:26]
+df = pd.read_excel('data_for_fitting.xlsx', sheet_name='data', header=2, usecols="A:Q")
 # only want NaHS ≤ 50 because higher values are toxic
-df = df[df['NaHS concentration'] <= 50]
+df = df[df['NaHS (uM)'] <= 50]
 df = df.drop(df.columns[-3:], axis=1) # get rid of last 3 columns because these are after 100 hours.
 # remove trials in which cells failed to grow
 df = df[df.values[:,-1] > 1]
 # extract relevant variables
-init_H2S = df['NaHS concentration'].values * pfx.micro * u.mole / u.liter # Sonal: are the units correct?
-density = df.values[:,2:].astype(float)
+init_H2S = df['NaHS (uM)'].values * pfx.micro * u.mole / u.liter
+density = df.values[:,3:].astype(float)
 density = OD_to_cell_density(density) # convert from OD600 to density
-time = np.array(df.columns[2:]).astype(float) * u.hour
+time = np.array(df.columns[3:]).astype(float) * u.hour
 
 ######################
 ### FIT PARAMETERS ###
@@ -185,7 +185,7 @@ for i in range(n_trials):
     plt.semilogy(time / u.hour, density_hat / (u.cell/(pfx.milli * u.liter)), '.-', color='blue')
     plt.xlim([-5, 105])
     plt.xticks([0, 50, 100])
-    plt.title(f"{df['NaHS concentration'].values[i]} µM, # {int(df.replicate.values[i])}")
+    plt.title(f"{df['NaHS (uM)'].values[i]} µM, # {int(df.replicate.values[i])}")
     plt.xlabel('hour')
     plt.ylabel('cells / ml')
     plt.savefig(f'figures/check_fit/{i+1}.pdf', bbox_inches='tight', dpi=300)

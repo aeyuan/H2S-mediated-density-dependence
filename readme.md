@@ -1,6 +1,7 @@
-This repository contains the ODE model for the paper:
+This repository contains the ODE model for the forthcoming paper:
 
-## Sonal et al., PLOS Biology, 2023
+## Collective production of hydrogen sulfide gas enables budding yeast lacking MET17 to overcome their metabolic defect
+currently available as a preprint on bioRxiv: https://doi.org/10.1101/2023.05.18.541364
 
 Below we provide instructions for reproducing Fig 5E-F in the main text, as well as each figure in the file "Supplementary_Text_1". Scripts are intended to be run on the command line. For example, to run the file `fit_affinity_param.py`, enter `python fit_affinity_param.py` at the command line.
 
